@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>README
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Wed May 09 15:26:17 -0400 2007</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+    <div id="diagram">
+      <map id="map" name="map">
+</map>
+<img src="../dot/f_0.png" usemap="#map" border="0" alt="dot/f_0.png">
+    </div>
+
+    <div id="description">
+      <p>
+SmartForm
+</p>
+<h6>===</h6>
+<p>
+The form helper with intelligence!
+</p>
+<p>
+Creates nicely laid out form fields for an ActiveRecord object, including
+it&#8216;s content columns and association reflections. The form fields are
+encapsulated in an HTML definition list.
+</p>
+<p>
+Author: Michael Behan aka &quot;Jabberwock&quot; (jabberwock /AT tenebrous
+/DOT com; or Jabberwock on irc.freenode.net) Copyright: Copyright(c) 2007
+Michael Behan, released under the BSD license For an example style-sheet
+via:
+</p>
+<pre>
+  ruby script/generate SmartFormStyles
+</pre>
+<p>
+Usage:
+</p>
+<pre>
+  smart_form_for(symbol, options)
+</pre>
+<p>
+Examples:
+</p>
+<pre>
+  &lt;% form_for people_url, :method =&gt; :post do %&gt;
+    &lt;%= smart_form_for :person %&gt;
+  &lt;% end %&gt;
+
+  &lt;% form_for edit_person_url(@person) do %&gt;
+    &lt;%= smart_form_for :person, :object =&gt; @person %&gt;
+  &lt;% end %&gt;
+</pre>
+<p>
+For full documentation, including options, please visit
+vendor/plugins/smart_form/rdoc/index.html
+</p>
+<p>
+Please feel free to e-mail me with feedback!
+</p>
+<p>
+Enjoy :)
+</p>
+<p>
+Michael Behan
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

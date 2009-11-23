@@ -1,0 +1,127 @@
+digraph TopLevel {
+    compound = true
+    bgcolor = lightcyan1
+    fontname = Arial
+    fontsize = 8
+    label = "TopLevel"
+    node [
+        fontname = Arial,
+        fontsize = 8,
+        color = black
+    ]
+
+    ActiveRecord__ActiveRecordError [
+        URL = "classes/ActiveRecord/ActiveRecordError.html",
+        label = "ActiveRecord::ActiveRecordError"
+    ]
+
+    ActiveRecord__ActiveRecordError -> Jabberwock__UnknownReflectionName [
+
+    ]
+
+    StandardError [
+        URL = "classes/StandardError.html",
+        label = "StandardError"
+    ]
+
+    StandardError -> Jabberwock__UnknownColumnType [
+
+    ]
+
+    ActiveRecord__ActiveRecordError -> Jabberwock__ColumnNotFound [
+
+    ]
+
+    subgraph cluster_Jabberwock {
+        fillcolor = palegreen1
+        URL = "classes/Jabberwock.html"
+        fontname = Arial
+        color = blue
+        label = "Jabberwock"
+        style = filled
+        Jabberwock [
+            shape = plaintext,
+            height = 0.01,
+            width = 0.01,
+            label = ""
+        ]
+
+        Jabberwock__UnknownReflectionName [
+            fontcolor = black,
+            URL = "classes/Jabberwock/UnknownReflectionName.html",
+            shape = ellipse,
+            color = palegoldenrod,
+            style = filled,
+            label = "UnknownReflectionName"
+        ]
+
+        Jabberwock__UnknownColumnType [
+            fontcolor = black,
+            URL = "classes/Jabberwock/UnknownColumnType.html",
+            shape = ellipse,
+            color = palegoldenrod,
+            style = filled,
+            label = "UnknownColumnType"
+        ]
+
+        Jabberwock__ColumnNotFound [
+            fontcolor = black,
+            URL = "classes/Jabberwock/ColumnNotFound.html",
+            shape = ellipse,
+            color = palegoldenrod,
+            style = filled,
+            label = "ColumnNotFound"
+        ]
+
+        subgraph cluster_Jabberwock__SmartForm {
+            fillcolor = palegreen3
+            URL = "classes/Jabberwock/SmartForm.html"
+            fontname = Arial
+            color = blue
+            label = "SmartForm"
+            style = filled
+            Jabberwock__SmartForm [
+                shape = plaintext,
+                height = 0.01,
+                width = 0.01,
+                label = ""
+            ]
+
+            subgraph cluster_Jabberwock__SmartForm__ClassMethods {
+                fillcolor = palegreen3
+                URL = "classes/Jabberwock/SmartForm/ClassMethods.html"
+                fontname = Arial
+                color = blue
+                label = "ClassMethods"
+                style = filled
+                Jabberwock__SmartForm__ClassMethods [
+                    shape = plaintext,
+                    height = 0.01,
+                    width = 0.75,
+                    label = ""
+                ]
+
+            }
+
+            subgraph cluster_Jabberwock__SmartForm__InstanceMethods {
+                fillcolor = palegreen3
+                URL = "classes/Jabberwock/SmartForm/InstanceMethods.html"
+                fontname = Arial
+                color = blue
+                label = "InstanceMethods"
+                style = filled
+                Jabberwock__SmartForm__InstanceMethods [
+                    shape = plaintext,
+                    height = 0.01,
+                    width = 0.75,
+                    label = ""
+                ]
+
+            }
+
+        }
+
+    }
+
+}
+

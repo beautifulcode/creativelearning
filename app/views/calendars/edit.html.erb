@@ -1,0 +1,16 @@
+<h1>Editing calendar</h1>
+
+<% form_for(@calendar, :html => {:multipart => true}) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+	<%= link_to url_for_file_column(@calendar, :file), url_for_file_column(@calendar, :file) if @calendar.file %>
+	<p><label for="calendar_file">File</label><br/>
+	<%= f.file_field :file %><br><br>
+  <%= submit_tag 'Save' %>
+<% end %>
+<%= link_to 'Cancel', @calendar %><br><br>
+<%= link_to 'Show', @calendar %> |
+<%= link_to 'Delete', calendar_url(@calendar), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete'
+ %> | 
+<%= link_to 'List', calendars_path %>

@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @calendar.title %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%=h @calendar.file %>
+</p>
+
+
+<%= link_to 'Edit', edit_calendar_path(@calendar) %> |
+<%= link_to 'List', calendars_path %>

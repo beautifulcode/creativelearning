@@ -1,0 +1,28 @@
+<p>
+  <b>Age:</b>
+  <%=h @class_schedule.age %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%=h @class_schedule.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%=h @class_schedule.end_time %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%=h @class_schedule.cost %>
+</p>
+
+<p>
+  <b>Occurs on:</b>
+  <%=h @class_schedule.occurs_on %>
+</p>
+
+
+<%= link_to 'Edit', edit_class_schedule_path(@class_schedule) %> |
+<%= link_to 'List', class_schedules_path %>

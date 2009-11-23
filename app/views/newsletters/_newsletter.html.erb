@@ -1,0 +1,2 @@
+<% @newsletter = newsletter if newsletter %>
+<li><%= link_to(newsletter.title, url_for_file_column(:newsletter, :file)) unless newsletter.file.blank? %></li>

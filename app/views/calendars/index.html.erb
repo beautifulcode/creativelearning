@@ -1,0 +1,9 @@
+<h2>School Calendars</h2>
+<%= link_to "Create New Calendar", new_calendar_url %>
+<% @calendars.each do |calendar| %>
+  <p>
+  <%= link_to calendar.title, calendar %> 
+  <%= link_to "Edit", edit_calendar_url(calendar) %>
+
+  </p>
+<% end %>

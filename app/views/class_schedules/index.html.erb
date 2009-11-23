@@ -1,0 +1,23 @@
+<h1>Listing Class Schedules</h1>
+
+<table style="width: 100%;">
+
+<% weekly_classes.each do |day| %>
+
+	<tr><th colspan="5"><%= day[0].occurs_on %></th></tr>
+	<% for class_schedule in day %>
+	  <tr>
+	    <td><%=h class_schedule.age %></td>
+	    <td><%=h class_schedule.hours %></td>
+	    <td><%=h class_schedule.cost %></td>
+	  </tr>
+	<% end %>
+
+<% end %>
+
+
+</table>
+
+<p>
+	* We define Junior Kindergarten as "the school year before entering kindergarten". We plan our programs to provide learning experiences that are appropriate for this age, taking into consideration individual learning styles and readiness for cognitive and fine motor activities.
+</p>

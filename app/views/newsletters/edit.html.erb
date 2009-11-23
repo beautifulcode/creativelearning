@@ -1,0 +1,14 @@
+<h1>Editing newsletter</h1>
+
+<% form_for(@newsletter, :html => {:multipart => true}) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+	<p><label for="newsletter_file">File</label><br/>
+	<%= f.file_field 'file'  %></p>
+  <%= submit_tag 'Save' %>
+<% end %>
+<%= link_to 'Cancel', @newsletter %><br><br>
+<%= link_to 'Show', @newsletter %> |
+<%= link_to 'Delete', newsletter_url(@newsletter), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete' %> | 
+<%= link_to 'List', newsletters_path %>

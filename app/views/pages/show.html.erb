@@ -1,0 +1,11 @@
+<% unless @page.root %>
+<h2><%= @page.title %></h2>
+<% end %>
+<div id="page_content">
+  <%= markdown(@page.body) %>
+</div>
+
+<% content_for :right_sidebar do %>
+  <%= sub_nav_for @page unless @page.title == 'Home' %>
+  <%= render :partial => "sidebar" if @page.title == 'Home' %>
+<% end %>

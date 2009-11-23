@@ -1,0 +1,12 @@
+<h1>Editing event</h1>
+
+<% form_for(@event) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+  <%= submit_tag 'Save' %>
+<% end %>
+<%= link_to 'Cancel', @event %><br><br>
+<%= link_to 'Show', @event %> |
+<%= link_to 'Delete', event_url(@event), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete' %> | 
+<%= link_to 'List', events_path %>

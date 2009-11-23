@@ -1,0 +1,12 @@
+<h1>Editing registration</h1>
+
+<% form_for(@registration) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+  <%= submit_tag 'Save' %>
+<% end %>
+<%= link_to 'Cancel', @registration %><br><br>
+<%= link_to 'Show', @registration %> |
+<%= link_to 'Delete', calendar_url(@calendar), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete' %>
+<%= link_to 'List', registrations_path %>

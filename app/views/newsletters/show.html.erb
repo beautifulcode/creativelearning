@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @newsletter.title %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @newsletter.date %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%=h @newsletter.file %>
+</p>
+
+
+<%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
+<%= link_to 'List', newsletters_path %>

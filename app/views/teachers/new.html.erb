@@ -1,0 +1,8 @@
+<h1>New teacher</h1>
+
+<% form_for(@teacher) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+  <%= submit_tag "Add" %>
+<% end %>
+
+<%= link_to 'List', teachers_path %>

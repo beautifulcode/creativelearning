@@ -1,0 +1,18 @@
+<p>
+  <b>Author:</b>
+  <%=h @testimonial.author %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @testimonial.date %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @testimonial.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_testimonial_path(@testimonial) %> |
+<%= link_to 'List', testimonials_path %>

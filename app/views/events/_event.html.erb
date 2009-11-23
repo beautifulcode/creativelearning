@@ -1,0 +1,6 @@
+<li>
+  <span><%= event.date %></span>
+  <h3><%= event.title %></h3>
+  <%= truncate_html event.description, 200 %>
+  <p class="more_link"><%= link_to "More Details", event_path(event) %></p>
+</li>

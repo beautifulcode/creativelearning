@@ -1,0 +1,22 @@
+	<% if current_calendar and current_calendar.file %>
+	<div id="current_calendar">
+		<% @current_calendar = current_calendar %>
+		<a id="calendar_link" href="<%= url_for_file_column(:calendar, :file) unless current_calendar.file.blank? %>"><span class="month"><%= current_calendar.month %></span> <span class="year"><%= current_calendar.year %></span></a>
+		<a id="" href="<%= url_for_file_column(:calendar, :file) unless current_calendar.file.blank? %>">View <%= current_calendar.short_month %> Calendar</a>
+	</div>
+	<% end %>
+	
+	
+	
+	<!--     Current News Sidebar      -->
+	<div id="currentNews">
+		<h3><img src="/images/layout/tab_current.gif" alt="Current School News" width="150" height="110" /></h3>
+		<div>
+			<p>What is going on at CLC?</p>
+			<ul>
+              <%= render :partial => "events/event", :collection => @events %>
+              <li><a href="/events">Archived News </a></li>
+			</ul>
+		</div>
+	</div>
+

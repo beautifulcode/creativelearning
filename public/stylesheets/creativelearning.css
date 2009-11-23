@@ -1,0 +1,127 @@
+/*
+------------------------------------
+          HTML Styles
+------------------------------------
+*/
+
+body{font-family:"Trebuchet MS",Gulim,Verdana,serif;font-size:.9em;color:#666666;background-color:#ddd;margin:0px;padding:0px;width:100%;}
+h1,h2,h3,h4{margin:0;padding:0;}
+h1{}
+h2{}
+h3{}
+h4{}
+a{color:#CC3300;text-decoration:none;}
+blockquote{border:1px dashed #333333;padding:10px;}
+blockquote span{font-weight:bold;font-size:small;display:block;margin:6px;}
+input,textarea{font-family:"Trebuchet MS",Arial,sans-serif;font-size:.8em;}
+textarea{width: 500px; height: 400px;}
+table{padding:0px;margin:0px;border:0px;}
+table td{vertical-align: top;}
+
+form{}
+#admin select{width: 50%;}
+#site textarea{}
+
+.event_list span{float: right;}
+.flash{font-size: 18px; padding: 10px 20px;}
+.error{border: 1px solid red; background: #EAACC6; color: #A20101;}
+.notice{border: 1px solid #8CB973; background: #D2F2A7; color: #005000;}
+
+
+.newsletter{}
+
+#site{width: 950px; margin: 0 auto; background: #fff; }
+
+
+/*
+------------------------------------
+          Header Section
+------------------------------------
+*/
+#header{background-image:url(/images/layout/header.gif);background-repeat:repeat-x;color:#FFFFFF;height:100px;z-index:30;}
+#header-wrapper{width: 950px; margin: 0 auto; height: 100px; position: relative;}
+#header h1{position:absolute;top:55px;left:10px;font-size:28px;}
+#header h1 a{color:#FFFFFF;}
+#header h1 span{font-family:Arial,Serif;font-weight:normal;font-size:22px;padding-left:10px;}
+#header h3{position:absolute;top:68px;right:10px;font-size:14px;padding-left:2px; font-style: italic;}
+span.logo{position:absolute;top:0px;right:0px;float:right;text-align:right;}
+
+
+/*
+------------------------------------
+          Navigation
+------------------------------------
+*/
+#navigation{overflow: hidden; border-bottom:1px dashed #CCCCCC;padding:4px;padding-left:170px;z-index:30;background-image:url(/images/layout/menu.gif);background-repeat:no-repeat;background-position:left;}
+#navigation ul{margin:0;padding:0; float: left;}
+#navigation li{list-style-type:none;display:block; float: left; white-space:nowrap; padding: 10px 0;}
+#navigation a{color:#3333CC;font-size:14px;font-weight:bold;padding:4px;padding-right:8px;padding-left:8px;border-right:1px solid #3333CC; }
+#navigation a:hover{color:#3366CC;background-image:url(/images/layout/underline_blue.gif);background-position:bottom;background-repeat:repeat-x;}
+
+.subnav{margin-left: 50px;}
+.subnav h3{border-bottom: 1px solid #821F00; padding: 5px 0;}
+.subnav ul{margin: 0; padding: 0;}
+.subnav li{list-style: none; border-bottom: 1px solid #efefef; /* background: url(/images/layout/nav-active.jpg) top left repeat-x;*/}
+.subnav li a{display: block; padding: 5px 10px;}
+.subnav .current a{font-weight: bold;}
+
+/*
+------------------------------------
+          Content
+------------------------------------
+*/
+#content{float:left;width:600px;display:inline;margin:0 0 0 10px;padding:10px;padding-top:24px;/*padding-bottom:180px;background-image:url(/images/layout/blocks.gif);background-repeat:no-repeat;background-position:right bottom;*/min-height:330px;}
+#content h2,#content h1{color:#006699;border-bottom:1px dashed;padding-top:5px;/*background-image:url(/images/layout/girl_brush.gif);background-position:top right;background-repeat:no-repeat;*/margin-bottom:20px;}
+#content h2 img{float:right;display:inline;clear:none;position:relative;top:0px;}
+#content h3{border-bottom:1px dashed #CCCCCC;}
+p a{background-image:url("../images/layout/underline.gif");background-position:bottom left;background-repeat:repeat-x;padding-bottom:5px;}
+a img{border: 0;}
+#content p{line-height: 1.5;}
+#content ul li{list-style-image:url(/images/layout/arrow.gif);padding-bottom:4px;}
+
+.teacher_list{float: left; clear: both; width: 100%;}
+.teacher_list dt{float: left; width: 250px; clear: left; height: 20px; border-bottom: 1px solid #ccc; padding-left: 5px;}
+.teacher_list dd{float: left; width: 340px;  margin: 0; height: 20px; border-bottom: 1px solid #ccc;}
+
+
+/*
+------------------------------------
+          Right Column
+------------------------------------
+*/
+#rightColumn{float:left;width:300px;padding:0px;margin:0px;font-family:Verdana,Arial,Sans;font-size:.75em;margin-top:30px;}
+#rightColumn h2{color: #fff; background: #CC3300; padding: 5px 10px; font-family: "Trebuchet MS", "Comic Sans", sans-serif; border: 1px dashed #5D2811;}
+#rightColumn a{background: none;}
+/*.sidebox{background: #efefef;}*/
+
+#current_calendar, #calendars{ /*background: url(/images/layout/calendar.png) 10px 45px no-repeat;*/ padding-bottom: 10px;}
+#calendars p{padding-left: 10px;}
+#current_calendar,#calendars a{font-size: 11px; display: block;}
+#current_calendar a#calendar_link{color: #111;  font-weight: bold; padding-left: 4px;height: 132px; width: 127px; display:block;}
+#current_calendar #year{float: right;}
+#calendars a{background: none;}
+
+/*       Current News Sidebar            */
+#currentNews{padding-bottom: 30px;}
+#currentNews h3 {color: #821F00; font-size: 14px; margin: 0px; padding: 0 50px 0 0; border-bottom: 1px solid ; margin-bottom: 5px; padding-bottom: 0; }
+#currentNews div{background-color:#F3E0E0;border:1px solid #CC8686;border-top:1px solid #F3E0E0; }
+#currentNews p{text-align:left;padding:4px;margin:0px;}
+#currentNews span{font-size: 10px;font-weight:normal;display:block; float: right; color: #999; line-height: 30px; position: absolute; top: 4px; right: 4px;}
+#currentNews ul{margin:4px;padding:0; }
+#currentNews li{list-style-type:none;margin:0px;padding:4px;margin-bottom: 20px; line-height: 1.8;position: relative;border: 1px solid #FFBACA;}
+#currentNews a{color:#CC3300;text-decoration:underline;}
+#currentNews .more_link a{display: block; float: right; clear: both; text-decoration: none; margin-top: -10px; color: #BF5935; font-size: 11px;}
+
+#newsletter{padding-bottom: 10px;}
+#newsletter .sidebox{padding: 10px;}
+
+/*       Schedule Table           */
+th{text-align:left;border:1px solid #333;padding:4px;}
+td{text-align:left;padding-left:10px;border:0px;border-bottom:1px dashed #777;}
+.striped{background-color:#CCCCCC;}
+
+#footer{display: block; clear: both; border-top: 1px solid #999; padding: 5px 10px; font-size: 11px; overflow: hidden; background: #ddd;}
+	#credits{float: right;}
+	#admin_links{float: left;}
+
+

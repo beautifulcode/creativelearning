@@ -1,0 +1,18 @@
+<h1>Editing registration_form</h1>
+
+<%= error_messages_for :registration_form %>
+
+<% form_for(@registration_form, :html => {:multipart => true}) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+	<%= link_to url_for_file_column(@registration_form, :file), url_for_file_column(@registration_form, :file) if @registration_form.file %>
+	<p><label for="registration_form_file">File</label><br/>
+	<%= f.file_field :file %><br><br>
+  <%= submit_tag 'Save' %>
+<% end %>
+<%= link_to 'Cancel', @registration_form %><br><br>
+<%= link_to 'Show', @registration_form %> |
+<%= link_to 'Delete', registration_form_url(@registration_form), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete'
+ %> | 
+<%= link_to 'List', registration_forms_path %>

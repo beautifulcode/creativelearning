@@ -1,0 +1,15 @@
+<h2>Our Parent Newsletter </h2>
+<p>Newsletters are sent home in conjuction with changes in themes. This is approximately every 8 weeks. The <%= link_to "calendar", calendars_url %> is also a good source of information.</p>
+<h3>Current Newsletter</h3>
+<ul>
+  <%= render :partial => @current_newsletter %>
+</ul>
+<ul>
+ <%= render :partial => @newsletters %>
+</ul>
+
+<p>We are providing the newsletters in both Microsoft Word and Adobe Acrobat PDF format for your viewing
+  pleasure. </p>
+<p><a href="http://www.adobe.com/products/acrobat/main.html"><img src="/images/layout/getacro.gif" alt="Get Acrobat Reader" width="88" height="31" border="0" /></a></p>
+<p><a href="http://www.adobe.com/products/acrobat/main.html">Click to install the free plugin from Adobe</a></p>
+<p>&nbsp;</p>

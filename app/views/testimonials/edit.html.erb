@@ -1,0 +1,12 @@
+<h1>Editing testimonial</h1>
+
+<% form_for(@testimonial) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+  <%= submit_tag 'Save' %>
+<% end %>
+<%= link_to 'Cancel', @testimonial %><br><br>
+<%= link_to 'Show', @testimonial %> |
+<%= link_to 'Delete', testimonial_url(@testimonial), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete' %>
+<%= link_to 'List', testimonials_path %>

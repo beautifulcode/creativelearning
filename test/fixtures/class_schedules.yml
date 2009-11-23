@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  age: MyString
+  start_time: 2007-12-13 22:49:47
+  end_time: 2007-12-13 22:49:47
+  cost: MyString
+  occurs_on: MyString
+
+two:
+  age: MyString
+  start_time: 2007-12-13 22:49:47
+  end_time: 2007-12-13 22:49:47
+  cost: MyString
+  occurs_on: MyString

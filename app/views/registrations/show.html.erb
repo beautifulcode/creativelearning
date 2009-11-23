@@ -1,0 +1,28 @@
+<p>
+  <b>First name:</b>
+  <%=h @registration.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @registration.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @registration.email %>
+</p>
+
+<p>
+  <b>Home phone:</b>
+  <%=h @registration.home_phone %>
+</p>
+
+<p>
+  <b>Cell phone:</b>
+  <%=h @registration.cell_phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_registration_path(@registration) %> |
+<%= link_to 'List', registrations_path %>

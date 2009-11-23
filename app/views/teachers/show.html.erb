@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @teacher.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @teacher.description %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @teacher.email %>
+</p>
+
+<p>
+  <b>Home phone:</b>
+  <%=h @teacher.home_phone %>
+</p>
+
+<p>
+  <b>Cell phone:</b>
+  <%=h @teacher.cell_phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
+<%= link_to 'List', teachers_path %>

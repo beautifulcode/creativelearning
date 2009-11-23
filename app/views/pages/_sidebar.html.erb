@@ -1,0 +1,27 @@
+<div id="calendars">
+  <h2>Class Calendars</h2>
+  <div  class="sidebox">
+    <%= render :partial => @calendars %>    
+  </div>
+</div>
+
+<div id="newsletter">
+  <h2>Newsletter &amp; Registration</h2>
+  <div class="sidebox">
+  <p>Current Newsletter: <%= link_to @newsletter.title, url_for_file_column(:newsletter, :file) unless @newsletter.file.blank? %>    </p>
+  <p>Registration Form:  <%= link_to @registration_form.title, url_for_file_column(:registration_form, :file) unless @registration_form.file.blank? %>    </p>
+  </div>
+</div>
+	
+	
+	<!--     Current News Sidebar      -->
+	<div id="currentNews" >
+		<h2>Current News</h2>
+		<div class="sidebox">
+			<ul>
+          <%= render :partial => @events %>
+          <li><a href="/events">Archived News </a></li>
+			</ul>
+		</div>
+	</div>
+

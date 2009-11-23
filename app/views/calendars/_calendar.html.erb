@@ -1,0 +1,4 @@
+<p>
+	<% @calendar = calendar if calendar %>
+	<%= link_to @calendar.title, url_for_file_column(:calendar, :file) unless @calendar.file.blank? %>
+</p>

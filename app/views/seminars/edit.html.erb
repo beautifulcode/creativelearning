@@ -1,0 +1,13 @@
+<h1>Editing seminar</h1>
+
+<% form_for(@seminar) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+  <%= submit_tag 'Save' %>
+<% end %>
+
+<%= link_to 'Cancel', @seminar %><br><br>
+<%= link_to 'Show', @seminar %> |
+<%= link_to 'Delete', seminar_url(@seminar), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete' %>
+<%= link_to 'List', seminars_path %>

@@ -1,0 +1,13 @@
+<h1>Editing teacher</h1>
+
+<% form_for(@teacher) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+  <%= submit_tag 'Save' %>
+<% end %>
+
+<%= link_to 'Cancel', @teacher %><br><br>
+<%= link_to 'Show', @teacher %> |
+<%= link_to 'Delete', teacher_url(@teacher), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete' %> | 
+<%= link_to 'List', teachers_path %>

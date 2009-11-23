@@ -1,0 +1,22 @@
+<h1>Listing registration_forms</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>File</th>
+  </tr>
+
+<% for registration_form in @registration_forms %>
+  <tr>
+    <td><%=h registration_form.title %></td>
+    <td><%=h registration_form.file %></td>
+    <td><%= link_to 'Show', registration_form %></td>
+    <td><%= link_to 'Edit', edit_registration_form_path(registration_form) %></td>
+    <td><%= link_to 'Destroy', registration_form, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New registration_form', new_registration_form_path %>

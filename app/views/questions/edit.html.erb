@@ -1,0 +1,12 @@
+<h1>Editing question</h1>
+
+<% form_for(@question) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+  <%= submit_tag 'Save' %>
+<% end %>
+<%= link_to 'Cancel', @question %><br><br>
+<%= link_to 'Show', @question %> |
+<%= link_to 'Delete', question_url(@question), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete' %> | 
+<%= link_to 'List', questions_path %>

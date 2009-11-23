@@ -1,0 +1,20 @@
+<h1>New semester</h1>
+
+<%= error_messages_for :semester %>
+
+<% form_for(@semester, :html => {:multipart => true}) do |f| %>
+	<%= render :partial => 'form' , :locals=>{:f => f}%>
+	
+	<%= link_to(@semester.title, url_for(:semester, :registration_form)) if @semester.registration_form %>
+	<p>
+	  <b>Registration form</b><br />
+	  <%= f.file_field :registration_form %>
+	</p>
+
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'List', semesters_path %>

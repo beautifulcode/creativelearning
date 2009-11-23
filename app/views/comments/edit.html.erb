@@ -1,0 +1,13 @@
+<h1>Editing comment</h1>
+
+<% form_for(@comment) do |f| %>
+  <%= render :partial => 'form' , :locals=>{:f => f}%>
+  <%= submit_tag 'Save' %>
+<% end %>
+<%= link_to 'Cancel', @comment %><br><br>
+<%= link_to 'Show', @comment %> |
+<%= link_to 'Delete', comment_url(@comment), 
+          :confirm => 'Are you sure?', 
+          :method => 'delete'
+ 		%> | 
+<%= link_to 'List', comments_path %>

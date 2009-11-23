@@ -1,0 +1,84 @@
+
+<!-- InstanceBeginEditable name="er_content" -->
+<h2>Administrator Access </h2>
+<div id="admin">
+  
+  <h3>Stats</h3>
+  <% 
+    require 'rubygems'
+    require 'rugalytics'
+    profile = Rugalytics.default_profile
+    report = profile.top_content_report(:from=>(Date.today - 7) )
+    top_items_over_week = report.items.sort_by{|i| i.unique_pageviews.to_i}.reverse
+   %>
+<p>
+   Visits: <%= profile.visits %>
+   Page Views: <%= profile.pageviews %>
+</p>  
+  
+  
+	<h3>Add Content</h3>
+	<p><%= link_to "Add New Calendar", new_calendar_url %></p>
+	<p><%= link_to "Add New Event", new_event_url %></p>
+	<p><%= link_to "Add New Question", new_question_url %></p>
+	<p><%= link_to "Add New Testimonial", new_testimonial_url %></p>
+	<p><%= link_to "Add New Teacher", new_teacher_url %></p>
+	
+	
+
+	<h3>Edit Content </h3>
+	<h4>Registration</h4>
+	<p><%= link_to "Edit Registration Document", edit_registration_form_path(@registration_form) %></p>
+	
+	<h4>Newsletter</h4>
+	<ul>
+	<% @newsletters.each do |cal| %>
+	  <li><%= link_to cal.title, cal %> - <%= link_to 'edit', edit_newsletter_path(cal) %></li>
+	<% end %>
+	<li class="new_link"><%= link_to "Create New", new_newsletter_path %></li>
+	</ul>
+	
+	<h4>Calendars</h4>
+	<ul>
+	<% @calendars.each do |cal| %>
+	  <li><%= link_to cal.title, cal %> - <%= link_to 'edit', edit_calendar_path(cal) %></li>
+	<% end %>
+	<li class="new_link"><%= link_to "Create New", new_calendar_path %></li>
+	</ul>
+	
+	<h4>Teachers</h4>
+	<ul>
+	<% @teachers.each do |cal| %>
+	  <li><%= link_to cal.name, cal %> - <%= link_to 'edit', edit_teacher_path(cal) %></li>
+	<% end %>
+	<li class="new_link"><%= link_to "Create New", new_teacher_path %></li>
+	</ul>
+
+	<h4>Questions</h4>	
+	<ul>
+	<% @questions.each do |cal| %>
+	  <li><%= link_to cal.question, cal %> - <%= link_to 'edit', edit_question_path(cal) %></li>
+	<% end %>
+	<li class="new_link"><%= link_to "Create New", new_question_path %></li>
+	</ul>
+
+	<h4>Testimonials</h4>	
+	<ul>
+	<% @testimonials.each do |cal| %>
+	  <li><%= link_to cal.author, cal %> - <%= link_to 'edit', edit_testimonial_path(cal) %></li>
+	<% end %>
+	<li class="new_link"><%= link_to "Create New", new_testimonial_path %></li>
+	</ul>
+
+	<h4>Schedules</h4>	
+	<ul>
+	<% @schedules.each do |cal| %>
+	  <li><%= link_to cal.title, cal %> - <%= link_to 'edit', edit_class_schedule_path(cal) %></li>
+	<% end %>	
+	<li class="new_link"><%= link_to "Create New", new_class_schedule_path %></li>
+	</ul>
+	
+	<h4>Pages</h4>
+	<%= sitemap %>
+	
+</div>

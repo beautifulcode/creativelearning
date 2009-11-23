@@ -1,0 +1,17 @@
+
+<h2>Creative Learning Staff</h2>
+<p>The Creative Learning Center takes great pride in its experienced, professional and caring staff who understand child development and are aware of the need to attend to all aspects of children's development. </p>
+<p>The utilization of a child-centered learning environment means that the teachers encourage and facilitate the learning process in subtle ways. This approach requires skill, patience and teamwork. </p>
+<p>We believe we have one of the finest teaching staffs in Southern Alberta . All our teachers are professionally trained and most have the experience of raising families of their own. The staff functions in teaching teams that remain consistent throughout the year.</p>
+<p>The director of the school is <a href="mailto:%20patti@creativelearningcenter.ca">Patti Brix</a>. </p>
+
+<h1>Listing Teachers</h1>
+<dl id="teacher_list" class="teacher_list">
+	<dt><strong>Teachers</strong></dt><dd><strong>Degree</strong></dd>
+	<%= render :partial => @teachers.select{|teacher| teacher.aide != true } %>
+</dl>
+
+<h3>Assistants</h3>
+<dl id="aide_list" class="teacher_list">
+	<%= render :partial => @teachers.select{|teacher| teacher.aide } %>
+</dl>

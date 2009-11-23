@@ -1,0 +1,23 @@
+<p>
+  <b>Title:</b>
+  <%=h @semester.title %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%=h @semester.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%=h @semester.end_date %>
+</p>
+
+<p>
+  <b>Registration form:</b>
+  <%=h @semester.registration_form %>
+</p>
+
+
+<%= link_to 'Edit', edit_semester_path(@semester) %> |
+<%= link_to 'List', semesters_path %>

@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @registration_form.title %>
+</p>
+
+<p>
+  <b>File:</b>
+  <%=h @registration_form.file %>
+</p>
+
+
+<%= link_to 'Edit', edit_registration_form_path(@registration_form) %> |
+<%= link_to 'List', registration_forms_path %>

@@ -1,0 +1,28 @@
+<h1>Listing registrations</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Home phone</th>
+    <th>Cell phone</th>
+  </tr>
+
+<% for registration in @registrations %>
+  <tr>
+    <td><%=h registration.first_name %></td>
+    <td><%=h registration.last_name %></td>
+    <td><%=h registration.email %></td>
+    <td><%=h registration.home_phone %></td>
+    <td><%=h registration.cell_phone %></td>
+    <td><%= link_to 'Show', registration %></td>
+    <td><%= link_to 'Edit', edit_registration_path(registration) %></td>
+    <td><%= link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New registration', new_registration_path %>
